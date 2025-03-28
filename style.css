@@ -1,12 +1,7 @@
-const data = {};
-const bodyElement = $0;
-const computedStyles = window.getComputedStyle(bodyElement);
-data.currentFontFamily = computedStyles.getPropertyValue('font-family');
-bodyElement.style.fontFamily = "'Space Grotesk', sans-serif";
-
-body {
-      font-family: "Space Grotesk", sans-serif;
-    }
+/* Apply Space Grotesk font globally */
+* {
+    font-family: 'Space Grotesk', sans-serif;
+}
 
 /* Other specific styling */
 body {
