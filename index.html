@@ -15,12 +15,37 @@
 <body class="ai-style-change-1">
 
 <h1 ;">Survey Air Pre-flight Checklist</h1>
-<h1>CAD Input</h1>
+<h2>CAD Input</h2>
 <label for="cad">Enter CAD Number:</label>
 <input type="number" id="cad" name="cad" min="1" placeholder="Enter CAD">
 
-<h2>On-Site Checklist</h2>
-<ul id="onsite-checklist">
+<h3>Operating Site Map</h3>
+<input type="text" id="postcode" placeholder="Enter postcode">
+<button onclick="updateMap()">Show Map</button>
+
+<iframe 
+    id="mapFrame"
+    width="600" 
+    height="450" 
+    style="border:0; display: none;" 
+    loading="lazy" 
+    allowfullscreen 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+<script>
+function updateMap() {
+    var postcode = document.getElementById("postcode").value.trim();
+    if (postcode !== "") {
+        var mapUrl = "https://www.google.com/maps/embed/v1/place?key=AIzaSyD99grfIiAPHZmJA-iikwQJmgXz5IOu7wc&q=" + encodeURIComponent(postcode) + "&zoom=18&maptype=satellite";
+        document.getElementById("mapFrame").src = mapUrl;
+        document.getElementById("mapFrame").style.display = "block"; // Show map
+    }
+}
+</script>
+
+    <h2>On-Site Checklist</h2>
+    <ul id="onsite-checklist">
     <li><input type="checkbox" id="sign-in"> Sign in</li>
     <li><input type="checkbox" id="safety-equipment"> Safety Equipment</li>
     <li><input type="checkbox" id="weather-conditions"> Weather conditions</li>
@@ -45,7 +70,7 @@
     </li>
     
     <!-- Flight Crew Briefing Section -->
-    <h3>Flight Crew Briefing</h3>
+    <h2>Flight Crew Briefing</h2>
     <ul id="flight-crew-briefing">
         <li><input type="checkbox" id="imsafe"> IMSAFE</li>
         <li><input type="checkbox" id="safety"> Safety</li>
@@ -56,10 +81,10 @@
     </ul>
     
     <!-- Briefing Notes Section -->
-    <h3>Briefing Notes</h3>
+    <h2>Briefing Notes</h2>
     <textarea id="briefing-notes" placeholder="Enter briefing notes here..."></textarea>
 
-<h3>Operating Site</h3> 
+<h2>Operating Site</h2> 
 <ul id="operating-site-checklist">
     <li><input type="checkbox" id="tols"> TOLS</li>
     <li><input type="checkbox" id="remote-pilot"> Remote Pilot</li>
