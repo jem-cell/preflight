@@ -1,13 +1,33 @@
-/* Apply Space Grotesk font globally */
+/* Apply Space Grotesk font globally to all elements */
 * {
     font-family: 'Space Grotesk', sans-serif;
-}
-
-/* Other specific styling */
-body {
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+}
+
+/* General styles for h1, h2, and h3 */
+h1, h2, h3 {
+    width: 600px;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 20px; /* Space from the previous element */
+}
+
+/* Ensure checklists align properly */
+ul {
+    width: 600px;  /* Set width to match headers */
+    margin-left: 0px;
+    padding-left: 0px; /* Remove extra left padding */
+    list-style: none;  /* Remove default list styles */
+}
+
+ul li {
+    margin-bottom: 10px; /* Optional: Space between checklist items */
+}
+
+/* Style for checkboxes */
+input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
 }
 
 /* Style for textareas */
@@ -19,12 +39,30 @@ textarea {
     border-radius: 4px;
     font-size: 14px;
     resize: vertical;
+    display: block;
+    margin-bottom: 10px; /* Optional: Space after textarea */
 }
 
 /* Style for input fields */
-input {
+input[type="number"], input[type="text"] {
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #ccc;
     font-size: 14px;
+    width: 100%; /* Make inputs fill their container */
+}
+
+/* Optional: To make the button align with other elements */
+button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
 }
