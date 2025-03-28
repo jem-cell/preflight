@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preflight Checklist</title>
+    
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="./index_files/style.css">
+    
+    <!-- Link to Google Fonts for Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="ai-style-change-1">
+
+<h1>CAD Input</h1>
+<label for="cad">Enter CAD Number:</label>
+<h1 style="font-family: 'Space Grotesk', sans-serif;">This is a Test Heading</h1>
+<input type="number" id="cad" name="cad" min="1" placeholder="Enter CAD">
+
+<h2>On-Site Checklist</h2>
+<ul id="onsite-checklist">
+    <li><input type="checkbox" id="sign-in"> Sign in</li>
+    <li><input type="checkbox" id="safety-equipment"> Safety Equipment</li>
+    <li><input type="checkbox" id="weather-conditions"> Weather conditions</li>
+    <li><input type="checkbox" id="tols-safe-area"> TOLS - Established in safe area</li>
+    <li><input type="checkbox" id="cordon"> Cordon (If necessary)</li>
+    <li><input type="checkbox" id="risk-assessment"> Risk Assessment
+    <br><textarea id="risk-assessment-text" placeholder="Enter Risk Assessment details" disabled=""></textarea>
+    </li>
+    <li><input type="checkbox" id="notams"> NOTAMs
+    <br><textarea id="notams-text" placeholder="Enter NOTAMs details" disabled=""></textarea>
+    </li>
+
+    <!-- Links Section -->
+    <li><strong>Important Links:</strong>
+        <ul>
+            <li><a href="https://dronesafetymap.com/?hsCtaTracking=b6fcfc7d-7407-4dc1-a704-87336e60a656%7C553a0e6e-33e7-4a4b-9c3f-7949e384667d#loc=51.5074000,0.1278000,12.9" target="_blank">Drone Safety Map</a></li>
+            <li><a href="https://notaminfo.com/ukmap" target="_blank">NOTAM Information Map</a></li>
+        </ul>
+    </li>
+    <li><input type="checkbox" id="atc-clearance"> ATC Final Clearance
+    <br><textarea id="atc-clearance-text" placeholder="Enter ATC Clearance details" disabled=""></textarea>
+    </li>
+    
+    <!-- Flight Crew Briefing Section -->
+    <h3>Flight Crew Briefing</h3>
+    <ul id="flight-crew-briefing">
+        <li><input type="checkbox" id="imsafe"> IMSAFE</li>
+        <li><input type="checkbox" id="safety"> Safety</li>
+        <li><input type="checkbox" id="exercise"> Exercise</li>
+        <li><input type="checkbox" id="equipment"> Equipment</li>
+        <li><input type="checkbox" id="discipline"> Discipline</li>
+        <li><input type="checkbox" id="signals"> Signals</li>
+    </ul>
+    
+    <!-- Briefing Notes Section -->
+    <h3>Briefing Notes</h3>
+    <textarea id="briefing-notes" placeholder="Enter briefing notes here..."></textarea>
+
+<h3>Operating Site</h3> 
+<ul id="operating-site-checklist">
+    <li><input type="checkbox" id="tols"> TOLS</li>
+    <li><input type="checkbox" id="remote-pilot"> Remote Pilot</li>
+    <li><input type="checkbox" id="flight-crew"> Flight Crew</li>
+    <li><input type="checkbox" id="access-point"> Access Point</li>
+    <li><input type="checkbox" id="access"> Access</li>
+    <li><input type="checkbox" id="demise"> Demise</li>
+    <li><input type="checkbox" id="flight-path"> Flight Path</li>
+    <li><input type="checkbox" id="extra-tols"> Extra TOLS</li>
+</ul>
+
+<button onclick="fetchWeather()">Check Weather</button>
+<p id="weather"></p>
+
+<script src="./index_files/script.js"></script>
+
+</body>
+</html>

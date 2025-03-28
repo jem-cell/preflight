@@ -1,0 +1,35 @@
+const data = {};
+const bodyElement = $0;
+const computedStyles = window.getComputedStyle(bodyElement);
+data.currentFontFamily = computedStyles.getPropertyValue('font-family');
+bodyElement.style.fontFamily = "'Space Grotesk', sans-serif";
+
+body {
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+/* Other specific styling */
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for textareas */
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+/* Style for input fields */
+input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
